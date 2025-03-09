@@ -14,7 +14,11 @@ For the user to interact with the system, there must be at least a command-line 
 - **Data Display:** What information does the user need to obtain from the system?
 The user needs to be able to obtain selected data from the database, the original data from the database, and any error messages or outputs from unavailable data or bugs, as well as the configured/formatted dataset. The user should also be able to obtain a dataset that is configured to their desire, with the rows and columns they want to see to take in the information provided.
 ## **Non-Functional Requirements**
+- **Performance:** How well does the system need to perform? 
 
+- **Reliability:** How reliable does the system and data need to be?
+
+- **Usability and Accessibility:** How easy to navigate does the system need to be? What instructions will we need for users to access the system?
 # **Determining Specifications**
 
 # **Design**
