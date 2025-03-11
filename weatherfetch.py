@@ -44,3 +44,10 @@ def display_weather_info(weather_data):
     else:
         # Print an error message if data could not be retrieved
         print("Error retrieving weather data.")
+#<--------------------------------------------TEST THE FUNCTIONS-------------------------------------------->
+  # Example city, change as needed
+
+# Fetch weather data for the given city
+
+
+# Display the retrieved weather information

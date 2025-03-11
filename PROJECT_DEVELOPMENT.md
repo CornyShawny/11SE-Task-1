@@ -61,7 +61,7 @@ What would improve the system but is ultimately not required?
 
 How quickly should we try to get the system to perform tasks, what efficiency is required to maintain user engagement? How can we ensure our program remains efficient?
 
-- **Useability / Accessibility**
+- **Usability / Accessibility**
 
 How might you make your application more accessible? What could you do with the User Interface to improve usability?
 
