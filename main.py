@@ -27,7 +27,6 @@ tk.Label(root, text="Type your city of choice here:", bg="skyblue", fg="black").
 entry = tk.Entry()
 entry.pack()
 
-#
 def submit_location():
     user_input = entry.get()
     print(f"Location submitted, User entered: {user_input}")
