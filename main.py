@@ -1,6 +1,7 @@
 import tkinter as tk
 from weatherfetch import *
 
+
 # title for gui and background
 root = tk.Tk() # create main window
 root.title("WeatherFetch")
@@ -32,10 +33,18 @@ def submit_location():
     print(f"Location submitted, User entered: {user_input}")
     city_name = user_input
     weather_data = fetch_weather(city_name)
-    display_weather_info(weather_data)
+    text_box_string = display_weather_info(weather_data)
+    print(text_box_string)
+
+    
 
 # submit button to submit the location
 submit = tk.Button(root, text="Submit", bg="skyblue", fg="black", command=submit_location)
 submit.pack()
+
+result_text = tk.StringVar()
+#result_label = tk.Label(root, textvariable=submit_location(), justify="left")
+
+#result_label.pack()
 
 root.mainloop()
