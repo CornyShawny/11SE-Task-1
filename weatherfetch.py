@@ -36,16 +36,10 @@ def display_weather_info(weather_data):
         country = weather_data["location"]["country"]  # Country
         temperature = weather_data["current"]["temp_c"]  # Temperature in Celsius
         condition = weather_data["current"]["condition"]["text"]  # Weather condition (e.g., Sunny, Rainy)
-        text_box_string = f"Weather in {location}, {region}, {country}: Temperature: {temperature}°C Condition: {condition}"
+        text_box_string = (f"Weather in {location}, {region}, {country}: \n"
+                           f"Temperature: {temperature}°C \nCondition: {condition}")
         return text_box_string
         # Print the weather details
     else:
         # Print an error message if data could not be retrieved
         print("Error retrieving weather data.")
-#<--------------------------------------------TEST THE FUNCTIONS-------------------------------------------->
-  # Example city, change as needed
-
-# Fetch weather data for the given city
-
-
-# Display the retrieved weather information
