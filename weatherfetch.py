@@ -42,4 +42,4 @@ def display_weather_info(weather_data):
         # Print the weather details
     else:
         # Print an error message if data could not be retrieved
-        print("Error retrieving weather data.")
+        return("Error retrieving weather data.")

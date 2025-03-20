@@ -35,7 +35,7 @@ submit = tk.Button(root, font=("Arial", 12), text="Submit", bg="skyblue", fg="bl
 submit.pack(pady=5)
 
 # Result label to display fetched data
-result_label = tk.Label(root, font=("Arial", 12, "bold"), textvariable=result_text, justify="left", bg="lightblue", fg="black", wraplength=250)
+result_label = tk.Label(root, font=("Arial", 12, "bold"), textvariable=result_text, justify="left", bg="lightblue", fg="black", wraplength=300)
 result_label.pack()
 
 root.mainloop()
