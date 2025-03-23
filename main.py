@@ -1,3 +1,4 @@
+# Import required modules
 import tkinter as tk
 from weatherfetch import *
 

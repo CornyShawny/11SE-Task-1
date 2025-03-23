@@ -36,11 +36,11 @@ What does the system actually NEED to do?
 
 - **User Requirements**
 
-What does the user need to be able to do? List all specifications here. The user must be able to view the data from the API.
+What does the user need to be able to do? List all specifications here. The user must be able to view the data from the API. There will be an input where the user can enter whatever city they want. If the data can be retrieved from the API, it will display the weather info, otherwise it will return an error.
 
 - **Inputs & Outputs**
 
-What inputs will the system need to accept and what outputs will it need to display? It needs to accept the requests from the user and display the request.
+What inputs will the system need to accept and what outputs will it need to display? It needs to accept the input and requests from the user and display the weather temperatures in their inputted city, including the temperature and weather condition.
 
 - **Core Features**
 
@@ -73,7 +73,7 @@ What could perhaps not crash the whole system, but could be an issue and needs t
 ### **Data Retrieval**
 **Use Case:** Retrieve Current Weather Data
 
-**Actors:** User, Weather API
+**Actors:** User(Meteorologist/Everyday person)
 
 **Preconditions:** Weather API is functional and accessible. User provides a valid location input (e.g., city name).
 
@@ -90,30 +90,48 @@ What could perhaps not crash the whole system, but could be an issue and needs t
 **Postconditions:** User views current weather details for the specified location, as well as the location data.
 
 ### **User Interface**
-**Use Case:** Configure Weather Data Display
+**Use Case:** Weather Data UI
 
-**Actors:** User
+**Actors:** User(Meteorologist/Everyday person)
 
-**Preconditions:** System is operational, with a functional and responsive UI.
+**Preconditions:** System is operational, with a functional and responsive UI. There is a submit button to submit the city to the API and retrieve the data.
 
 **Main Flow:**
+
+- User enters a city name into the text box.
+
+- User clicks on the submit button and sends a request to the Weather API with the specified location.
+
+- Weather data (e.g., temperature, weather condition) and location data (e.g. region, country) is retrieved from the API.
+
+- System displays the weather and location data to the user.
 
 **Postconditions:** User views weather and location data.
 
 ### **Data Display:**
 **Use Case:** View Weather with Error Handling
 
-**Actors:** User, Weather API
+**Actors:** User(Meteorologist/Everyday person)
 
 **Preconditions:** Weather API is able to provide forecast data. System is equipped to handle cases of missing data or API unavailability.
 
 **Main Flow:**
 
+- User enters a city name into the text box.
+
+- User clicks on the submit button and sends a request to the Weather API with the specified location.
+
+- Weather data (e.g., temperature, weather condition) and location data (e.g. region, country) is retrieved from the API.
+
+- If weather data is missing, return an error message.
+
+- System displays the weather and location data, or the error message to the user.
+
 **Postconditions:** User views weather and location data.
 
 # **Design**
 ## **Gantt Chart**
-
+![Alt text](images/Gantt%20chart%20(1).png)
 ## **Structure Chart**
 
 ## **Algorithms**
@@ -135,12 +153,18 @@ testing
 # **Installation**
 ### **requirements.txt**
 ```
-tkinter
-requests
+requests==2.32.3
 ```
 ### **README.md**
 ```
+# WeatherFetch
 
+WeatherFetch is an application which can get weather data from all over the world and display it to you with just a click. All you have to do is type your city into the text box and press submit, then you will be provided with the weather data of your chosen city!
+
+## Installation
+
+1.  Clone the repository
+2.  Install requirements.txt which can be done by typing ``pip install -r requirements.txt`` into the python terminal, which will install all the things you will need to run this program
 ```
 # **Maintenance**
 
