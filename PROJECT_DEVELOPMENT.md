@@ -154,6 +154,7 @@ testing
 ### **requirements.txt**
 ```
 requests==2.32.3
+ttkbootstrap
 ```
 ### **README.md**
 ```
