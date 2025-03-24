@@ -35,8 +35,6 @@ entry.pack(pady=10)
 
 entry.bind("<Return>", submit_location) # You can submit the location by pressing enter instead of clicking on the submit button
 
-
-
 # Submit button to submit the location
 submit = ttkbootstrap.Button(root, text="Submit", command=submit_location)
 submit.pack(pady=5)
