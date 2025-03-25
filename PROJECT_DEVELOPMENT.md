@@ -137,12 +137,20 @@ What could perhaps not crash the whole system, but could be an issue and needs t
 ## **Algorithms**
 ### **Pseudocode**
 ```
-
+BEGIN root.mainloop()
+INPUT user_input
+IF API Request Valid THEN
+    Fetch City Weather 
+ELSE
+    DISPLAY "Error retrieving weather data."
+ENDIF
+END root.mainloop()
 ```
 ### **Flowchart**
+
 ## **Data Dictionary**
-
-
+| Variable | Data Type | Format for Display | Size in Bytes | Size for Display | Description | Example |
+| -------- | --------- | ------------------ | ------------- | ---------------- | ----------- | ------- |
 # **Development**
 ```
 testing
