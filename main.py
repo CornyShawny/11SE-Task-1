@@ -26,11 +26,11 @@ def submit_location(event=None):
     print(f"Location submitted, User entered: {user_input}")
     city_name = user_input
     weather_data = fetch_weather(city_name)
-    text_box_string = display_weather_info(weather_data)
-    result_text.set(text_box_string) # Update StringVar with the result text
+    weather_output = display_weather_info(weather_data)
+    result_text.set(weather_output) # Update StringVar with the result text
 
 # Entry/text box
-entry = ttkbootstrap.Entry(font="Lexend, 14",) # resize
+entry = ttkbootstrap.Entry(font="Lexend, 14",)
 entry.pack(pady=10)
 
 entry.bind("<Return>", submit_location) # You can submit the location by pressing enter instead of clicking on the submit button

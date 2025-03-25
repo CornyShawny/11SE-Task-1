@@ -131,11 +131,15 @@ What could perhaps not crash the whole system, but could be an issue and needs t
 
 # **Design**
 ## **Gantt Chart**
-![Alt text](images/Gantt%20chart%20(1).png)
+![Alt text](images/Gantt%20Chart.png)
 ## **Structure Chart**
-
+![Alt text](images/Structure%20Chart.png)
 ## **Algorithms**
+### **Pseudocode**
+```
 
+```
+### **Flowchart**
 ## **Data Dictionary**
 
 
