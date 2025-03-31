@@ -152,16 +152,130 @@ END root.mainloop()
 | Variable | Data Type | Format for Display | Size in Bytes | Size for Display | Description | Example |
 | -------- | --------- | ------------------ | ------------- | ---------------- | ----------- | ------- |
 # **Development**
+## **main.py**
 ```
-testing
+# Import required modules
+import tkinter as tk # Import the tkinter library for GUI
+import ttkbootstrap # Import ttkbootstrap for themed widgets
+
+# Title for GUI and background/theme
+root = ttkbootstrap.Window(themename="superhero") # Create themed main window
+root.title("WeatherFetch")
+
+# Size of the window
+root.minsize(300, 300)
+root.maxsize(300, 300)
+root.geometry("300x360+50+50")
+
+# Words within GUI
+ttkbootstrap.Label(root, font="Lexend, 14", text="Weather Fetch").pack(pady=5)
+ttkbootstrap.Label(root, font="Lexend, 12", text="Type your city of choice here:").pack(pady=5)
+
+# Entry/text box
+entry = ttkbootstrap.Entry(font="Lexend, 14",)
+entry.pack(pady=10)
+
+root.mainloop() # Start the GUI event loop
 ```
+## **weatherfetch.py**
+```
+# Import the requests library to handle HTTP requests
+import requests
 
+# API key for WeatherAPI (must be filled in to work)
+api_key = "3b693e765bc04767924231518250903"
 
+# Base URL for WeatherAPI
+base_url = "http://api.weatherapi.com/v1"
 
+def fetch_weather(city_name):
+    """
+    Fetches the current weather data for a given city using WeatherAPI.
+    """
+    # Construct the complete API request URL
+    complete_url = f"{base_url}/current.json?key={api_key}&q={city_name}"
+
+    # Send an HTTP GET request to the API
+    response = requests.get(complete_url)
+
+    # Check if the request was successful (status code 200)
+    if response.status_code == 200:
+        # Return the JSON response as a Python dictionary
+        return response.json()
+    else:
+        # Return None if there was an error with the request
+        return None
+    
+def display_weather_info(weather_data):
+    """
+    Displays weather information from the API response.
+    """
+    if weather_data:
+        # Extract relevant data from the API response
+        location = weather_data["location"]["name"]  # City name
+        region = weather_data["location"]["region"]  # Region/State
+        country = weather_data["location"]["country"]  # Country
+        temperature = weather_data["current"]["temp_c"]  # Temperature in Celsius
+        condition = weather_data["current"]["condition"]["text"]  # Weather condition (e.g., Sunny, Rainy)
+        weather_output = (f"Weather in {location}, {region}, {country}: \n"
+                          f"Temperature: {temperature}°C \nCondition: {condition}") # Formatted weather information
+        return weather_output # Return the formatted weather information
+    else:
+        # Print an error message if data could not be retrieved
+        return("Error retrieving weather data.")
+```
 # **Integration**
+## **main.py**
+```
+# Import required modules
+import tkinter as tk # Import the tkinter library for GUI
+from weatherfetch import * # Import all functions from the weatherfetch module to format weather data
+import ttkbootstrap # Import ttkbootstrap for themed widgets
 
+# Title for GUI and background/theme
+root = ttkbootstrap.Window(themename="superhero") # Create themed main window
+root.title("WeatherFetch")
+
+# Size of the window
+root.minsize(300, 300)
+root.maxsize(300, 300)
+root.geometry("300x360+50+50")
+
+# Words within GUI
+ttkbootstrap.Label(root, font="Lexend, 14", text="Weather Fetch").pack(pady=5)
+ttkbootstrap.Label(root, font="Lexend, 12", text="Type your city of choice here:").pack(pady=5)
+
+# StringVar to hold the result text
+result_text = ttkbootstrap.StringVar()
+
+# Define submit_location to submit the location to the API and return the data
+def submit_location(event=None):
+    """Submits the location entered by the user and fetches formatted weather data."""
+    user_input = entry.get()
+    print(f"Location submitted, User entered: {user_input}")
+    city_name = user_input
+    weather_data = fetch_weather(city_name)
+    weather_output = display_weather_info(weather_data)
+    result_text.set(weather_output) # Update StringVar with the result text
+
+# Entry/text box
+entry = ttkbootstrap.Entry(font="Lexend, 14",)
+entry.pack(pady=10)
+
+entry.bind("<Return>", submit_location) # Bind the Enter key to submit_location so it can be submitted without pressing the button
+
+# Submit button to submit the location
+submit = ttkbootstrap.Button(root, text="Submit", command=submit_location)
+submit.pack(pady=5)
+
+# Result label to display fetched data
+result_label = ttkbootstrap.Label(root, font="Lexend, 12", textvariable=result_text, justify="left", wraplength=250)
+result_label.pack()
+
+root.mainloop() # Start the GUI event loop
+```
 # **Testing and Debugging**
-
+GitHub Commits?
 # **Installation**
 ### **requirements.txt**
 ```
@@ -171,13 +285,42 @@ ttkbootstrap
 ### **README.md**
 ```
 # WeatherFetch
-
 WeatherFetch is an application which can get weather data from all over the world and display it to you with just a click. All you have to do is type your city into the text box and press submit, then you will be provided with the weather data of your chosen city!
 
-## Installation
+## Features
+- Fetch weather data based on the user's location or a specified city.
+- Display current weather conditions, including temperature and weather description.
 
+## Requirements
+To run this program, you need to install the following dependencies:
+
+- `requests` to make HTTP requests to the weather API
+- `ttkbootstrap` to install tkinter themes
+
+### Install dependencies
+To install the required dependencies, you can run:
 1.  Clone the repository
 2.  Install requirements.txt which can be done by typing ``pip install -r requirements.txt`` into the python terminal, which will install all the things you will need to run this program
+
+```bash
+pip install -r requirements.txt
+
 ```
 # **Maintenance**
+## **Maintenance Questions**
+1. **Explain** how you would handle issues caused by changes to the weather API over time.
+- 
+2. **Explain** how you would ensure the program remains compatible with new versions of Python and libraries like `requests` and `matplotlib`.
+- 
+3. **Describe** the steps you would take to fix a bug found in the program after deployment.
+- 
+4. **Outline** how you would maintain clear documentation and ensure the program remains easy to update in the future.
+- 
 
+## **Final Evaluation**
+1. **Evaluate** the current functionality of the program in terms of how well it addresses the functional and non-functional requirements.
+- 
+2. **Discuss** areas for improvement or new features that could be added.
+- 
+3. **Evaluate** how the project was managed throughout its development and maintenance, including your time management and how challenges were addressed during the software development lifecycle.
+- 

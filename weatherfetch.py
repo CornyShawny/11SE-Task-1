@@ -37,9 +37,8 @@ def display_weather_info(weather_data):
         temperature = weather_data["current"]["temp_c"]  # Temperature in Celsius
         condition = weather_data["current"]["condition"]["text"]  # Weather condition (e.g., Sunny, Rainy)
         weather_output = (f"Weather in {location}, {region}, {country}: \n"
-                           f"Temperature: {temperature}°C \nCondition: {condition}")
-        return weather_output
-        # Print the weather details
+                          f"Temperature: {temperature}°C \nCondition: {condition}") # Formatted weather information
+        return weather_output # Return the formatted weather information
     else:
         # Print an error message if data could not be retrieved
         return("Error retrieving weather data.")
