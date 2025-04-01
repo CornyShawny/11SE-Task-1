@@ -136,21 +136,25 @@ What could perhaps not crash the whole system, but could be an issue and needs t
 ![Alt text](images/Structure%20Chart.png)
 ## **Algorithms**
 ### **Pseudocode**
+Main()
 ```
 BEGIN root.mainloop()
 INPUT user_input
 IF API Request Valid THEN
     Fetch City Weather 
 ELSE
-    DISPLAY "Error retrieving weather data."
+    OUTPUT "Error retrieving weather data."
 ENDIF
 END root.mainloop()
 ```
 ### **Flowchart**
-
+Main()
+![Alt text](images/Flow%20Chart%20Main().png)
 ## **Data Dictionary**
-| Variable | Data Type | Format for Display | Size in Bytes | Size for Display | Description | Example |
-| -------- | --------- | ------------------ | ------------- | ---------------- | ----------- | ------- |
+| Variable | Data Type | Format for Display | Size in Bytes | Size for Display | Description | Example | Validation |
+| -------- | --------- | ------------------ | ------------- | ---------------- | ----------- | ------- | ---------- |
+| city_name | String | Text | 100 | 100 | City name to fetch weather for | Gosford | Must be a non-empty string |
+| weather_data | String | Text | 250 | 250 | Data fetched from API for chosen city | Weather in Gosford, New South Wales, Australia: Temperature: 17.2C Condition: Sunny| Must be a non-empty string|
 # **Development**
 ## **main.py**
 ```
@@ -275,7 +279,7 @@ result_label.pack()
 root.mainloop() # Start the GUI event loop
 ```
 # **Testing and Debugging**
-GitHub Commits?
+Dates + In-depth commit
 # **Installation**
 ### **requirements.txt**
 ```
