@@ -136,7 +136,7 @@ What could perhaps not crash the whole system, but could be an issue and needs t
 ![Alt text](images/Structure%20Chart.png)
 ## **Algorithms**
 ### **Pseudocode**
-Main()
+**Main()**
 ```
 BEGIN root.mainloop()
 INPUT user_input
@@ -147,8 +147,20 @@ ELSE
 ENDIF
 END root.mainloop()
 ```
+```
+BEGIN display_weather_info()
+IF weather_data exists THEN
+    format weather_data
+    RETURN weather_output
+ELSE
+    RETURN "Error retrieving weather data."
+ENDIF
+END display_weather_info()
+```
+BEGIN
+```
 ### **Flowchart**
-Main()
+**Main()**
 ![Alt text](images/Flow%20Chart%20Main().png)
 ## **Data Dictionary**
 | Variable | Data Type | Format for Display | Size in Bytes | Size for Display | Description | Example | Validation |
