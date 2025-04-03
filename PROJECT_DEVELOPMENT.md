@@ -150,7 +150,7 @@ END root.mainloop()
 ```
 BEGIN display_weather_info()
 IF weather_data exists THEN
-    format weather_data
+    retrieve location, region...
     RETURN weather_output
 ELSE
     RETURN "Error retrieving weather data."
