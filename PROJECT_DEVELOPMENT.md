@@ -139,29 +139,42 @@ What could perhaps not crash the whole system, but could be an issue and needs t
 **Main()**
 ```
 BEGIN root.mainloop()
-INPUT user_input
-IF API Request Valid THEN
-    Fetch City Weather 
-ELSE
-    OUTPUT "Error retrieving weather data."
-ENDIF
+WHILE window open
+    INPUT user_input
+    IF API Request Valid THEN
+        Fetch City Weather 
+        Display Weather Info
+    ELSE
+        OUTPUT "Error retrieving weather data."
+    ENDIF
+    ENDWHILE
 END root.mainloop()
+```
+```
+BEGIN fetch_weather()
+fetch weather_data from API
+RETURN weather_data
+END fetch_weather()
 ```
 ```
 BEGIN display_weather_info()
 IF weather_data exists THEN
-    retrieve location, region...
+    fetch location, region, country, temperature, condition from weather_data
+    weather_output = location, region, country, temperature, condition
     RETURN weather_output
 ELSE
     RETURN "Error retrieving weather data."
 ENDIF
 END display_weather_info()
 ```
-BEGIN
-```
 ### **Flowchart**
-**Main()**
-![Alt text](images/Flow%20Chart%20Main().png)
+**root.mainloop()**
+![alt text](<images/Flow Chart root.mainloop().png>)
+**fetch_weather()**
+![alt text](<images/Flow Chart fetch_weather().png>)
+**display_weather_info()**
+![alt text](<images/Flow Chart display_weather_info().png>)
+
 ## **Data Dictionary**
 | Variable | Data Type | Format for Display | Size in Bytes | Size for Display | Description | Example | Validation |
 | -------- | --------- | ------------------ | ------------- | ---------------- | ----------- | ------- | ---------- |
