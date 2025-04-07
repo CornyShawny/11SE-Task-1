@@ -304,52 +304,80 @@ result_label.pack()
 root.mainloop() # Start the GUI event loop
 ```
 # **Testing and Debugging**
-Dates + In-depth commit
+**Note:** These are just rewrites of the GitHub Commits, please disregard the original ones on GitHub as they aren't really in-depth.
+
+## **March 10 - Import Module and Base GUI**
+Created a simple base for the GUI using tkinter in main.py, and created a module for the weather fetch app (`weatherfetch.py`). Both the module and main code work well and had no problems while testing. Hopefully the module can be integrated into the GUI next lesson, and the GUI could also be improved on.
+
+## **March 11 - Tweak GUI**
+Imported the weatherfetch module, changed up the colours and font as well as the size of the GUI, also integrated the module into main.py through the function `submit_location()` and added an entry box into the GUI. Everything other than the font works in the code, but improvements need to be made to `submit_location()` so that it displays on the GUI (because it currently displays in the console/terminal).
+
+## **March 17 - Experimenting with Code**
+Changed up the `submit_location()` function (from `main.py`) and the `display_weather_info()` function (from `weatherfetch.py`) to integrate the output into the GUI through a string variable. This change was successful and had no problems while running it. Though, improvements need to be made on the look/aesthetic on the GUI.
+
+## **March 19 - Touch Up**
+Touched up on the code comments, messed with the font and colours for some labels (text) within the GUI, formatted the output info, and uncommented + changed a piece of code to display the output. Overall no problems were faced while running the code, but the colours and font did look a bit ugly, therefore improvements need to be made on the aesthetics of this program.
+
+## **March 24 - Ttkbootstrap**
+Implemented `ttkbootstrap`, which adds themes for `tkinter`, changed up most of the text and colours to fit the theme, changed up font as well, also added the ability to submit the text input by pressing enter, instead of clicking on the submit button. The themes work well, and looks great, the submit works, but the fonts still don't work, so maybe it shouldn't be included. Not many things need to be changed as the code is mostly finished now, maybe some touch up.
+
+## **March 31 - Code Comments + DocStrings**
+Added and changed some code comments and docstrings for both `main.py` and `weatherfetch.py` as final small touches. Overall everything works and looks well, nothing much to change now that its finished.
+
 # **Installation**
 ### **requirements.txt**
 ```
-requests==2.32.3
+requests
 ttkbootstrap
 ```
 ### **README.md**
 ```
-# WeatherFetch
+# **WeatherFetch**
 WeatherFetch is an application which can get weather data from all over the world and display it to you with just a click. All you have to do is type your city into the text box and press submit, then you will be provided with the weather data of your chosen city!
 
-## Features
+## **Features**
 - Fetch weather data based on the user's location or a specified city.
 - Display current weather conditions, including temperature and weather description.
 
-## Requirements
+## **Requirements**
 To run this program, you need to install the following dependencies:
-
 - `requests` to make HTTP requests to the weather API
 - `ttkbootstrap` to install tkinter themes
 
-### Install dependencies
+### **Install dependencies**
 To install the required dependencies, you can run:
 1.  Clone the repository
-2.  Install requirements.txt which can be done by typing ``pip install -r requirements.txt`` into the python terminal, which will install all the things you will need to run this program
+2.  Install requirements.txt which can be done by typing ``pip install -r requirements.txt`` into the python terminal, which will install all the things you will need to run this program. Also, make sure to check for updates!
 
 ```bash
 pip install -r requirements.txt
 
+**Note:** If the API key doesn't work, it may be because of the API request limit, so you might have to get your own key and replace the current one. To get an API key, simply go to https://www.weatherapi.com/ and sign up, where you will then be provided your key, which you can use to replace the current one in the code.
 ```
 # **Maintenance**
 ## **Maintenance Questions**
 1. **Explain** how you would handle issues caused by changes to the weather API over time.
-- 
+
+The weather API will change over time. This could include changes to where they get their data from, the format of the data, or how the data is processed. If these changes do occur, I will update the code if needed. The API key might expire, so there are instructions in `README.md` where it explains how to get a new API key to replace the current one. If issues persist, this project may need a full rewrite or small changes based on the size of the problem.
+
 2. **Explain** how you would ensure the program remains compatible with new versions of Python and libraries like `requests` and `matplotlib`.
-- 
+
+Problems wouldn't happen with python updating as the program should run on all. For `ttkbootstrap`, there shouldn't be the need to update it as it is just themes, but it may have to for compatibility. If any library is outdated, the user can just run `pip install -r requirements.txt` again. If this program is incompatible, changes need to be made to ensure it's compatibility with newer versions.
+
 3. **Describe** the steps you would take to fix a bug found in the program after deployment.
-- 
+
+If there is a bug, the steps I would take to fix it is first, test if the bug is a result of the code or the device running it. For device bugs, I would troubleshoot and then try to fix it by changing code to make it compatible with a variety of devices (through testing), and if it was a code bug then I would troubleshoot, and then change what is needed to fix/prevent the bug, and then vigorously test it to ensure that it works well. Lasty, I would release these changes as an update/fix to the code.
+
 4. **Outline** how you would maintain clear documentation and ensure the program remains easy to update in the future.
-- 
+
+I would maintain clear documentation of the code through code comments and docstrings as well as GitHub commits to ensure the program is easy to reflect on which results in easier problem-solving/bug-fixing for updates in the future. There is also a READ.ME file which will guide users on how to use the program.
 
 ## **Final Evaluation**
 1. **Evaluate** the current functionality of the program in terms of how well it addresses the functional and non-functional requirements.
-- 
+
+
 2. **Discuss** areas for improvement or new features that could be added.
-- 
+
+
 3. **Evaluate** how the project was managed throughout its development and maintenance, including your time management and how challenges were addressed during the software development lifecycle.
-- 
+
