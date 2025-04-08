@@ -170,8 +170,10 @@ END display_weather_info()
 ### **Flowchart**
 **root.mainloop()**
 ![alt text](<images/Flow Chart root.mainloop().png>)
+
 **fetch_weather()**
 ![alt text](<images/Flow Chart fetch_weather().png>)
+
 **display_weather_info()**
 ![alt text](<images/Flow Chart display_weather_info().png>)
 
