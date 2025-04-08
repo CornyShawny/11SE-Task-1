@@ -168,13 +168,13 @@ ENDIF
 END display_weather_info()
 ```
 ### **Flowchart**
-**root.mainloop()**
+#### **root.mainloop()**
 ![alt text](<images/Flow Chart root.mainloop().png>)
 
-**fetch_weather()**
+#### **fetch_weather()**
 ![alt text](<images/Flow Chart fetch_weather().png>)
 
-**display_weather_info()**
+#### **display_weather_info()**
 ![alt text](<images/Flow Chart display_weather_info().png>)
 
 ## **Data Dictionary**
@@ -377,12 +377,12 @@ I would maintain clear documentation of the code through code comments and docst
 ## **Final Evaluation**
 1. **Evaluate** the current functionality of the program in terms of how well it addresses the functional and non-functional requirements.
 
-The current functionality of the program mostly addresses the functional and non-functional requirements. For data retrieval, the user can access the data from the API by using the program to search for a city, and there is also an error message for missing data. The user interface is also good as this program uses a GUI from tkinter, the layout and format is concise and readable, though it lacks some functionality. The data is displayed well as the user obtains/views the weather data after submitting their chosen city but not in a row or column format that is configurable. This system runs quickly and efficiently, formatting of the data is really fast, and the displaying/returning is also almost instant. This program is also reliable as the API is reliable, and that only the API is responsible for it's unreliability. Lastly, this program is both usable and accessible as it is very easy to use, and provides concise information for the user, there are instructions for the user in the `README.md` if they don't understand how to use it. Overall, this program functions well, and fulfills most of both the functional and non-functional requirements.
+The current functionality of the program mostly addresses the functional and non-functional requirements. For data retrieval, the user can access the data from the API by using the program to search for a city, and there is also an error message for missing data. The user interface is also good as this program uses a GUI from `tkinter`, the layout and format is concise and readable, though it lacks some functionality. The data is displayed well as the user obtains/views the weather data after submitting their chosen city but not in a row or column format that is configurable. This system runs quickly and efficiently, formatting of the data is really fast, and the displaying/returning is also almost instant. This program is also reliable as the API is reliable, and that only the API is responsible for it's unreliability. Lastly, this program is both usable and accessible as it is very easy to use, and provides concise information for the user, there are instructions for the user in the `README.md` if they don't understand how to use it. Overall, this program functions well, and fulfills most of both the functional and non-functional requirements.
 
 2. **Discuss** areas for improvement or new features that could be added.
 
-
+To improve on this project, I could've made more features and functions for the code and user interface. The features should've been more advanced, like real-time data, weather data comparisons (comparing the data of 2 or more locations), choosing what information you want (weather condition, temperature etc.). The user should also be able to view the history or prediction of the weather for a location for a number of days, as well as adding a real-time weather map for the location. Another feature that should be added is an weather icon/image depending on the weather conditions to follow the aesthetic. Also, the GUI layout and theme could've been improved on as the GUI didn't look amazing. This project was simple, which is why there should be these advanced features added.
 
 3. **Evaluate** how the project was managed throughout its development and maintenance, including your time management and how challenges were addressed during the software development lifecycle.
 
-
+This project was managed well throughout development and maintenance, as most lessons we worked on this in class, leaving less time needed for us to do it, though my project was simple so it was pretty quick to finish. Time management was alright but I did procrastinate a bit by not working on it much at home in the last few weeks, I thought I wasn't working up to pace, but in the last week, I managed my time efficiently to get this task done. Some challenges I faced was other assessments, as we had an assessment block a week or two before the project was due, and another challenge for me was the design part of the software development lifecycle as I had trouble understanding/creating my algorithms and structure chart. I also faced challenges during code development, at first I had trouble trying to integrate my module into my GUI (through `submit_location()`), but with the help of the internet and teacher, a solution was found. In conclusion, this project was managed efficiently throughout the software development lifecycle.
