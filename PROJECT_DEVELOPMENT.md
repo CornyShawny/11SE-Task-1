@@ -28,7 +28,7 @@ The system and data should be always reliable as it is only the API that affects
 
 - **Usability and Accessibility:** How easy to navigate does the system need to be? What instructions will we need for users to access the system?
 
-The system should be concise and efficient, only providing the information that the user specifies. The instructions can be found in the READ.md file contained in this program, providing a guide for how to use it, and how to install the required dependencies.
+The system should be concise and efficient, only providing the information that the user specifies. The instructions can be found in the `README.md` file contained in this program, providing a guide for how to use it, and how to install the required dependencies.
 
 # **Determining Specifications**
 ## **Functional Specifications**
@@ -48,7 +48,7 @@ At its core, what specifically does the program need to be able to do? The progr
 
 - **User Interaction**
 
-How will users interact with the system (e.g. command-line, GUI?) and what information will it need to provide to help users navigate? The program will have a command-line UI and it will provide the commands for the API to get the data and information for the user to view
+How will users interact with the system (e.g. command-line, GUI?) and what information will it need to provide to help users navigate? The program will have a command-line UI and it will provide the commands for the API to get the data and information for the user to view.
 
 - **Error Handling**
 
@@ -307,7 +307,7 @@ root.mainloop() # Start the GUI event loop
 **Note:** These are just rewrites of the GitHub Commits, please disregard the original ones on GitHub as they aren't really in-depth.
 
 ## **March 10 - Import Module and Base GUI**
-Created a simple base for the GUI using tkinter in main.py, and created a module for the weather fetch app (`weatherfetch.py`). Both the module and main code work well and had no problems while testing. Hopefully the module can be integrated into the GUI next lesson, and the GUI could also be improved on.
+Created a simple base for the GUI using `tkinter` in `main.py`, and created a module for the weather fetch app (`weatherfetch.py`). Both the module and main code work well and had no problems while testing. Hopefully the module can be integrated into the GUI next lesson, and the GUI could also be improved on.
 
 ## **March 11 - Tweak GUI**
 Imported the weatherfetch module, changed up the colours and font as well as the size of the GUI, also integrated the module into main.py through the function `submit_location()` and added an entry box into the GUI. Everything other than the font works in the code, but improvements need to be made to `submit_location()` so that it displays on the GUI (because it currently displays in the console/terminal).
@@ -327,8 +327,8 @@ Added and changed some code comments and docstrings for both `main.py` and `weat
 # **Installation**
 ### **requirements.txt**
 ```
-requests
-ttkbootstrap
+requests >= 1.10.1
+ttkbootstrap >= 2.32.3
 ```
 ### **README.md**
 ```
@@ -366,18 +366,21 @@ Problems wouldn't happen with python updating as the program should run on all. 
 
 3. **Describe** the steps you would take to fix a bug found in the program after deployment.
 
-If there is a bug, the steps I would take to fix it is first, test if the bug is a result of the code or the device running it. For device bugs, I would troubleshoot and then try to fix it by changing code to make it compatible with a variety of devices (through testing), and if it was a code bug then I would troubleshoot, and then change what is needed to fix/prevent the bug, and then vigorously test it to ensure that it works well. Lasty, I would release these changes as an update/fix to the code.
+If there is a bug, the steps I would take to fix it is first, test if the bug is a result of the code or the device running it. For device bugs, I would troubleshoot and then try to fix it by changing code to make it compatible with a variety of devices (through testing), and if it was a code bug then I would troubleshoot, and then change what is needed to fix/prevent the bug, and then vigorously test it to ensure that it works well. Lastly, I would release these changes as an update/fix to the code.
 
 4. **Outline** how you would maintain clear documentation and ensure the program remains easy to update in the future.
 
-I would maintain clear documentation of the code through code comments and docstrings as well as GitHub commits to ensure the program is easy to reflect on which results in easier problem-solving/bug-fixing for updates in the future. There is also a READ.ME file which will guide users on how to use the program.
+I would maintain clear documentation of the code through code comments and docstrings as well as GitHub commits to ensure the program is easy to reflect on which results in easier problem-solving/bug-fixing for updates in the future. There is also a `READ.ME` file which will guide and give instructions to users on how to use the program.
 
 ## **Final Evaluation**
 1. **Evaluate** the current functionality of the program in terms of how well it addresses the functional and non-functional requirements.
 
+The current functionality of the program mostly addresses the functional and non-functional requirements. For data retrieval, the user can access the data from the API by using the program to search for a city, and there is also an error message for missing data. The user interface is also good as this program uses a GUI from tkinter, the layout and format is concise and readable, though it lacks some functionality. The data is displayed well as the user obtains/views the weather data after submitting their chosen city but not in a row or column format that is configurable. This system runs quickly and efficiently, formatting of the data is really fast, and the displaying/returning is also almost instant. This program is also reliable as the API is reliable, and that only the API is responsible for it's unreliability. Lastly, this program is both usable and accessible as it is very easy to use, and provides concise information for the user, there are instructions for the user in the `README.md` if they don't understand how to use it. Overall, this program functions well, and fulfills most of both the functional and non-functional requirements.
 
 2. **Discuss** areas for improvement or new features that could be added.
 
 
+
 3. **Evaluate** how the project was managed throughout its development and maintenance, including your time management and how challenges were addressed during the software development lifecycle.
+
 

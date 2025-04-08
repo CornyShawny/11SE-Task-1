@@ -1,5 +1,5 @@
 # **WeatherFetch**
-WeatherFetch is an application which can get weather data from all over the world and display it to you with just a click. All you have to do is type your city into the text box and press submit, then you will be provided with the weather data of your chosen city!
+WeatherFetch is an application which can get weather data (from https://www.weatherapi.com/) all over the world and display it to you with just a click. All you have to do is type your city into the text box and press submit, then you will be provided with the weather data of your chosen city!
 
 ## **Features**
 - Fetch weather data based on the user's location or a specified city.

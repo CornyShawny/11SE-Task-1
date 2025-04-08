@@ -1,2 +1,2 @@
-requests
-ttkbootstrap
+requests >= 1.10.1
+ttkbootstrap >= 2.32.3
